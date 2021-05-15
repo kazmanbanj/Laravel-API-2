@@ -29,7 +29,7 @@ class NotesController extends Controller
         ];
     }
 
-    //create new article
+    //create new note
     public function create(Request $request)
     {
         $rules = [
@@ -51,6 +51,7 @@ class NotesController extends Controller
         return response($response);
     }
 
+    // view all notes
     public function allNotes()
     {
         $notes = Note::all();
@@ -59,6 +60,7 @@ class NotesController extends Controller
         return response($response);
     }
 
+    // permanently delete a data
     public function permanentDelete($id)
     {
         $note = Note::destroy($id);
@@ -70,6 +72,7 @@ class NotesController extends Controller
         return response($response);
     }
 
+    // deleting a data softly
     public function softDelete($id)
     {
         $note = Note::destroy($id);
@@ -91,6 +94,7 @@ class NotesController extends Controller
         return response($response);
     }
 
+    // returns only softDeleted data
     public function softDeleted()
     {
         $notes = Note::onlyTrashed()->get();
@@ -99,6 +103,7 @@ class NotesController extends Controller
         return response($response);
     }
 
+    // restores a soft deleted data
     public function restore($id)
     {
         $note = Note::onlyTrashed()->find($id);
@@ -114,6 +119,7 @@ class NotesController extends Controller
         return response($response);
     }
 
+    // permanently deleting a soft deleted data
     public function permanentDeleteSoftDeleted($id)
     {
         $note = Note::onlyTrashed()->find($id);
