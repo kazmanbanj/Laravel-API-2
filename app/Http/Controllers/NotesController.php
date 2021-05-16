@@ -67,7 +67,8 @@ class NotesController extends Controller
         if ($note) {
             $response = $this->successfulMessage(200,  0, '', 'Successfully deleted', true);
         } else {
-            $response = $this->notFoundMessage();        }
+            $response = $this->notFoundMessage();        
+        }
 
         return response($response);
     }
