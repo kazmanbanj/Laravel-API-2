@@ -69,7 +69,7 @@ class NotesController extends Controller
 
     public function show($id)
     {
-        $note = Note::find($id);
+        $note = Note::findOrFail($id);
         $response = $this->successfulMessage(200, $note->count(), $note, 'Successful', true);
 
         return response($response);
