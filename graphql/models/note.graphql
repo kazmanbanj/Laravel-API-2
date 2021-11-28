@@ -1,0 +1,13 @@
+type Note {
+    id: ID!
+    name: String!
+    body: String!
+    user: User! @belongsTo
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+extend type Query {
+    notes: [Note!]! @all
+    note(id: ID @eq): Note @find
+}
