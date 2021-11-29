@@ -1,0 +1,13 @@
+type User {
+    id: ID!
+    name: String!
+    email: String!
+    created_at: DateTime!
+    updated_at: DateTime!
+    notes: [Note!] @hasMany
+}
+
+extend type Query {
+    users: [User!]! @all
+    user(id: ID @eq): User @find
+}
