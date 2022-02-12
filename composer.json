@@ -11,7 +11,9 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.40",
         "laravel/tinker": "^2.5",
-        "rap2hpoutre/laravel-log-viewer": "^2.1"
+        "rap2hpoutre/laravel-log-viewer": "^2.1",
+        "mll-lab/laravel-graphql-playground": "^2.5",
+        "nuwave/lighthouse": "^5.26"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
