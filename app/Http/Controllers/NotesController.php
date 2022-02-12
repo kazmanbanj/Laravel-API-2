@@ -54,7 +54,7 @@ class NotesController extends Controller
 
         $validator = Validator::make($request->all(), $rules);
         if ($validator->fails()) {
-            $response['data'] = $validator->messages();
+            $response['data'] = $validator;
             return $response;
         }
 
@@ -84,11 +84,11 @@ class NotesController extends Controller
 
         $validator = Validator::make($request->all(), $rules);
         if ($validator->fails()) {
-            $response['data'] = $validator->messages();
+            $response['data'] = $validator;
             return $response;
         }
 
-        // $note = new Note;
+        $note = new Note;
         $note->name = $request->name;
         $note->body = $request->body;
         $note->update();
