@@ -30,3 +30,5 @@ Route::get('v2/notes/withsoftdelete', 'App\Http\Controllers\NotesController@note
 Route::get('v2/notes/softdeleted', 'App\Http\Controllers\NotesController@softDeleted');
 Route::patch('/v1/notes/{id}', 'App\Http\Controllers\NotesController@restore');
 Route::delete('v3/notes/{id}', 'App\Http\Controllers\NotesController@permanentDeleteSoftDeleted');
+
+Route::get('logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index']);
