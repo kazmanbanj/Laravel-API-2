@@ -6,12 +6,12 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "arcanedev/log-viewer": "^8.3",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.40",
         "laravel/tinker": "^2.5",
-        "rap2hpoutre/laravel-log-viewer": "^2.1",
         "mll-lab/laravel-graphql-playground": "^2.5",
         "nuwave/lighthouse": "^5.26"
     },

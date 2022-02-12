@@ -4,8 +4,146 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cb922dab8c53de25e06aec45ba45ed62",
+    "content-hash": "d390c7cdc6848bd6d0a22d101d385dcf",
     "packages": [
+        {
+            "name": "arcanedev/log-viewer",
+            "version": "8.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ARCANEDEV/LogViewer.git",
+                "reference": "8badbc9435d8d73add6f39ec03076e735db90350"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ARCANEDEV/LogViewer/zipball/8badbc9435d8d73add6f39ec03076e735db90350",
+                "reference": "8badbc9435d8d73add6f39ec03076e735db90350",
+                "shasum": ""
+            },
+            "require": {
+                "arcanedev/support": "^8.0",
+                "ext-json": "*",
+                "php": "^7.3|^8.0",
+                "psr/log": "^1.1 || ^2.0"
+            },
+            "require-dev": {
+                "laravel/framework": "^8.74",
+                "mockery/mockery": "^1.4.2",
+                "orchestra/testbench-core": "^6.27",
+                "phpunit/phpunit": "^9.5.10"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "8.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Arcanedev\\LogViewer\\LogViewerServiceProvider",
+                        "Arcanedev\\LogViewer\\Providers\\DeferredServicesProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "helpers.php"
+                ],
+                "psr-4": {
+                    "Arcanedev\\LogViewer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ARCANEDEV",
+                    "email": "arcanedev.maroc@gmail.com",
+                    "homepage": "https://github.com/arcanedev-maroc",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Provides a Log Viewer for Laravel",
+            "homepage": "https://github.com/ARCANEDEV/LogViewer",
+            "keywords": [
+                "arcanedev",
+                "arcanesoft",
+                "laravel",
+                "log",
+                "log viewer",
+                "log-viewer",
+                "logviewer"
+            ],
+            "support": {
+                "issues": "https://github.com/ARCANEDEV/LogViewer/issues",
+                "source": "https://github.com/ARCANEDEV/LogViewer/tree/8.3.0"
+            },
+            "time": "2022-02-09T19:22:29+00:00"
+        },
+        {
+            "name": "arcanedev/support",
+            "version": "8.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ARCANEDEV/Support.git",
+                "reference": "b161c3c080b314e832410295011625721fbd3a2f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ARCANEDEV/Support/zipball/b161c3c080b314e832410295011625721fbd3a2f",
+                "reference": "b161c3c080b314e832410295011625721fbd3a2f",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^8.0",
+                "illuminate/support": "^8.0",
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "laravel/framework": "^8.0",
+                "orchestra/testbench": "^6.0",
+                "phpunit/phpunit": "^9.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "8.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "helpers.php"
+                ],
+                "psr-4": {
+                    "Arcanedev\\Support\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ARCANEDEV",
+                    "email": "arcanedev.maroc@gmail.com",
+                    "homepage": "https://github.com/arcanedev-maroc"
+                }
+            ],
+            "description": "ARCANEDEV Support Helpers",
+            "homepage": "https://github.com/ARCANEDEV/Support",
+            "keywords": [
+                "arcanedev",
+                "arcanesoft",
+                "laravel",
+                "support"
+            ],
+            "support": {
+                "issues": "https://github.com/ARCANEDEV/Support/issues",
+                "source": "https://github.com/ARCANEDEV/Support/tree/8.1.0"
+            },
+            "time": "2020-11-27T17:09:38+00:00"
+        },
         {
             "name": "asm89/stack-cors",
             "version": "v2.1.1",
@@ -2818,69 +2956,6 @@
                 }
             ],
             "time": "2021-09-25T23:10:38+00:00"
-        },
-        {
-            "name": "rap2hpoutre/laravel-log-viewer",
-            "version": "v2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/rap2hpoutre/laravel-log-viewer.git",
-                "reference": "199b4f21004c8f0c00fbc9222e0cedf1341b5e81"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/rap2hpoutre/laravel-log-viewer/zipball/199b4f21004c8f0c00fbc9222e0cedf1341b5e81",
-                "reference": "199b4f21004c8f0c00fbc9222e0cedf1341b5e81",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "4.2.*|5.*|^6.0|^7.0|^8.0|^9.0",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "orchestra/testbench": "3.7.*|^7.0",
-                "phpunit/phpunit": "^7|^9.5.10"
-            },
-            "type": "laravel-package",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Rap2hpoutre\\LaravelLogViewer\\LaravelLogViewerServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Rap2hpoutre\\LaravelLogViewer\\": "src/"
-                },
-                "classmap": [
-                    "src/controllers"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "rap2hpoutre",
-                    "email": "raphaelht@gmail.com"
-                }
-            ],
-            "description": "A Laravel log reader",
-            "keywords": [
-                "laravel",
-                "log",
-                "log-reader",
-                "log-viewer",
-                "logging",
-                "lumen"
-            ],
-            "support": {
-                "issues": "https://github.com/rap2hpoutre/laravel-log-viewer/issues",
-                "source": "https://github.com/rap2hpoutre/laravel-log-viewer/tree/v2.1.0"
-            },
-            "time": "2022-02-10T07:16:16+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
